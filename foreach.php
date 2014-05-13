@@ -17,7 +17,23 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 foreach ($things as $things) {
 	if (is_array($things)) {
 		print_r ($things);
-	}	else if (is_float($things)) {
+	}	else if (is_scalar($things)) {
+		echo "{$things} is a scalar\n";
+	}
+}	
+
+
+
+
+
+
+
+
+
+
+
+/*
+	else if (is_float($things)) {
 		echo "{$things} is a float\n";
 	}	else if (is_array($things)) {
 		echo "{$things} is a array\n";
@@ -26,6 +42,6 @@ foreach ($things as $things) {
 	}	else if (is_string($things)) {
 		echo "{$things} is a string\n";
 	}
-}
+}*/
 
 
