@@ -14,11 +14,13 @@ foreach ($data as $datum) {
 
 $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, (string) 11);
 
-foreach ($things as $things) {
-	if (is_array($things)) {
-		print_r ($things);
-	}	else if (is_scalar($things)) {
-		echo "{$things} is a scalar\n";
+foreach ($things as $thing) {
+	if (is_array($thing)) {
+		echo "Array\n";
+		print_r (!$thing);
+	}	else if (is_array(!$thing)) {
+	}	else if (is_scalar(!$thing)) {
+		echo "{$thing}\n";
 	}
 }	
 
