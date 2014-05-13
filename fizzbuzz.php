@@ -1,4 +1,4 @@
-git<?php
+<?php
 
 echo " Lets Start !\n";
 
@@ -13,17 +13,6 @@ for ($a = 1; $a <= 100; $a++) {
  	} else {
  		echo $a . PHP_EOL;
  	} 
- }
-
-/*define ('MIN', 1);
-define ('MAX', 100);
-define ('multi_3', 'Fizz')
-define ('multi_5', 'Buzz')
-define ('multi_15', 'FizzBuzz')
-
-$MIN = 1;
-$MAX = 100
-$fizz % 3;
-$buzz % 5;
+}
 
 
