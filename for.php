@@ -2,14 +2,24 @@
 
 echo ("Please enter a start number ");
 
-$min = (int)fgets(STDIN);
+$min = trim(fgets(STDIN));
+
+if (!is_numeric($min)) {
+	fwrite(STDERR, "Must input numeric value \n");
+	exit(1);
+}
 
 echo ("Please enter a second number ");
 
-$two = (int)fgets(STDIN);
+$two = trim(fgets(STDIN));
+
+if (!is_numeric($two)) {
+	fwrite(STDERR, "Must input numeric value\n");
+	exit(1);
+}
 
 echo ("Please enter an incrementer! ");
-$inc = (int)fgets(STDIN);
+$inc = trim(fgets(STDIN));
 
 if ($inc == "\n") {
 	$inc = 1;
@@ -28,6 +38,3 @@ echo "\$index has a value of {$index}\n";
 
 
 //Make sure you are only allowing users to pass in numbers. Give an error message is both passed arguments are not numeric. See php.net/is_numeric.
-
-
-
