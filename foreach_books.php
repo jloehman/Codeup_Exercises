@@ -29,7 +29,12 @@ $books = array(
 //print_r($books);
 
 foreach ($books as $titles => $details) {
-	echo "$titles was published in "  .  $details ['published']  .  " and was written by "  .  $details['author']  .  " .\n\n";
+	//echo "$titles was published in "  .  $details ['published']  .  " and was written by "  .  $details['author']  .  " .\n\n";*/
+			foreach ($details as $attribute => $value) {
+		if ($value > 1950) {
+			echo "$titles\n\n";
+	}	
+	}	
 }
 
 ?>
