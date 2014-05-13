@@ -17,7 +17,7 @@ $things = array('Sgt. Pepper', "11", null, array(1,2,3), 3.14, "12 + 7", false, 
 foreach ($things as $thing) {
 	if (is_array($thing)) {
 		echo "Array\n";
-		print_r (!$thing);
+		//print_r ($thing);
 	}	else if (is_array(!$thing)) {
 	}	else if (is_scalar(!$thing)) {
 		echo "{$thing}\n";
