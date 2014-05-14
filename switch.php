@@ -8,7 +8,8 @@ date_default_timezone_set('America/Chicago');
 // 1 (for Monday) through 7 (for Sunday)
 $day_of_week = date('1');
 
-switch($day_of_week) {
+switch($day_of_week) 
+if ({$day_of_week} == date){
     case 1:
     	echo 'monday';
     	break;
