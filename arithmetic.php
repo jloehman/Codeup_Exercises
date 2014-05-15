@@ -38,23 +38,23 @@ multiply(1, 22);
 function divide($a, $b) {
     // Add code here
 if (is_numeric($a) && is_numeric($b)) {
-		echo $a / $b . PHP_EOL;
-	} else {
-		echo 'ERROR: both $a and $b should be numbers\n';
-	}
+		if ($a == 0 || $b == 0) {
+			echo "ERROR: non divisible by 0 \n";
+	} echo $a / $b . PHP_EOL;
 }
-divide(1,2);
+}
+divide(0,2);
 
 
-//Add a function modulus that finds the modulus of 2 numbers.
-function modulus($a, $b) {
-if (is_numeric($a) && is_numeric($b)) {
-		echo $a % $b . PHP_EOL;
-	} else {
-		echo 'ERROR: both $a and $b should be numbers\n';
-	}
-}
-modulus(1,1);
+// //Add a function modulus that finds the modulus of 2 numbers.
+// function modulus($a, $b) {
+// if (is_numeric($a) && is_numeric($b)) {
+// 		echo $a % $b . PHP_EOL;
+// 	} else {
+// 		echo 'ERROR: both $a and $b should be numbers\n';
+// 	}
+// }
+// modulus(1,1);
 
 
 
