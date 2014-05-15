@@ -38,10 +38,15 @@ multiply(1, 22);
 function divide($a, $b) {
     // Add code here
 if (is_numeric($a) && is_numeric($b)) {
-		if ($a == 0 || $b == 0) {
-			echo "ERROR: non divisible by 0 \n";
-	} echo $a / $b . PHP_EOL;
-}
+		if ($b == 0) {
+				echo "ERROR: $a and $b non divisible by 0 \n";
+		} else {
+			echo $a / $b;
+		}
+		} else {
+			echo "ERROR: Not numbers!\n";
+		}			
+echo PHP_EOL;
 }
 divide(0,2);
 
