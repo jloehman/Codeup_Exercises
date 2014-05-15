@@ -1,61 +1,131 @@
 <?php
 
-function error(){
-	echo "Error Message\n";
+function check($a, $b) {
+  if (is_numeric($a) && is_numeric($b)) {
+    return true . PHP_EOL;
+  }else{
+    return false . PHP_EOL;
+    echo "ERROR!\n";
+
+  }
 }
 
 function add($a, $b) {
-if (is_numeric($a) && is_numeric($b)) {
-		echo $a + $b . PHP_EOL;
-	} else {
-		error();
-    // echo $a + $b . PHP_EOL;
+  if (check($a, $b)) {
+    return $a + $b . PHP_EOL;
+  }
 }
-}
-add(1,"a");
 
-function subtract($a, $b) {
-    // Add code here
-if (is_numeric($a) && is_numeric($b)) {
-		echo $a - $b . PHP_EOL;
-	} else {
-		error();
-	}
+echo add(1,2);
+
+
+function minus($a, $b) {
+  if (check($a, $b)) {
+    return $a - $b . PHP_EOL;
+  }
 }
-subtract(1,"a");
+
+echo minus(3,2);
+
 
 function multiply($a, $b) {
-    // Add code here
-if (is_numeric($a) && is_numeric($b)) {
-		echo $a * $b . PHP_EOL;
-	} else {
-error();
+  if (check($a, $b)) {
+    return $a * $b . PHP_EOL;
+  }
 }
-}
-multiply(1, 22);
+
+echo multiply(2,2);
 
 function divide($a, $b) {
-    // Add code here
-if (is_numeric($a) && is_numeric($b)) {
-		if ($b == 0) {
-			error();
-		} else {
-			echo $a / $b;
-		}
-		} else {				
-			error();
-		}
-		echo PHP_EOL;
+  if (check($a, $b)) {
+    if ($b == 0) {
+      echo "ERROR\n";
+      return false;
+    }
+    return $a / $b . PHP_EOL;
+  }
 }
-divide(0,2);
+
+echo divide(3,0);
 
 
-//Add a function modulus that finds the modulus of 2 numbers.
 function modulus($a, $b) {
-if (is_numeric($a) && is_numeric($b)) {
-		echo $a % $b . PHP_EOL;
-	} else {
-error();	
+  if (check($a, $b))  {
+    return $a % $b . PHP_EOL;
+  }
 }
-}
-modulus(1,1);
+
+echo modulus(1,2);
+
+
+// //example on 'return with function'
+
+// function add($a, $b) {
+// 	if (is_numeric($a) && is_numeric($b)){
+// 		return $a + $b;
+// 	} else {
+// 		return "ERROR! \$a and/or \$b was not a number!\n";
+// }
+// }
+
+
+// 	$c = 5;
+// 	$d = 25;
+// 	$e = 4.6;
+// 	$f = pi();
+
+// $result = add('15', $e);
+// var_dump($result);
+
+// $result2 = add(5,6);
+// var_dump($result2);
+// echo add($result, $reulst2) . PHP_EOL;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function divide_else($a, $b) {
+// 	if ($b == 0){
+// 		return "Cannot divide by 0";
+// 	}else{
+// 		return $a / $b;
+// 	}
+// }
+
+
+
+
+// function divide_return
+
+
+
+
+
+
+// function error(){
+// 	 if (!is_numeric(!$a) || !is_numeric(!$b) {
+// 	return "ERROR\n";
+// 	}else{
+// 		return "FALSE";
+// 	}
+// }
+// function add($a, $b) {
+// if (is_numeric($a) && is_numeric($b)) {
+// 	return $a + $b;
+// // 		echo $a + $b . PHP_EOL;
+//  	} else {
+//  		return error();
+// //     // echo $a + $b . PHP_EOL;
+// // }
+// // }
+// // add(1,"a");
