@@ -1,67 +1,61 @@
 <?php
 
-
+function error(){
+	echo "Error Message\n";
+}
 
 function add($a, $b) {
 if (is_numeric($a) && is_numeric($b)) {
 		echo $a + $b . PHP_EOL;
 	} else {
-		echo 'ERROR: both $a and $b should be numbers\n';
-	}
+		error();
     // echo $a + $b . PHP_EOL;
 }
-
-add(1,3);
+}
+add(1,"a");
 
 function subtract($a, $b) {
     // Add code here
 if (is_numeric($a) && is_numeric($b)) {
 		echo $a - $b . PHP_EOL;
 	} else {
-		echo 'ERROR: both $a and $b should be numbers\n';
+		error();
 	}
 }
-
-subtract(1,1);
+subtract(1,"a");
 
 function multiply($a, $b) {
     // Add code here
 if (is_numeric($a) && is_numeric($b)) {
 		echo $a * $b . PHP_EOL;
 	} else {
-		echo 'ERROR: both $a and $b should be numbers\n';
-	}
+error();
 }
-
+}
 multiply(1, 22);
 
 function divide($a, $b) {
     // Add code here
 if (is_numeric($a) && is_numeric($b)) {
 		if ($b == 0) {
-				echo "ERROR: $a and $b non divisible by 0 \n";
+			error();
 		} else {
 			echo $a / $b;
 		}
-		} else {
-			echo "ERROR: Not numbers!\n";
-		}			
-echo PHP_EOL;
+		} else {				
+			error();
+		}
+		echo PHP_EOL;
 }
 divide(0,2);
 
 
-// //Add a function modulus that finds the modulus of 2 numbers.
-// function modulus($a, $b) {
-// if (is_numeric($a) && is_numeric($b)) {
-// 		echo $a % $b . PHP_EOL;
-// 	} else {
-// 		echo 'ERROR: both $a and $b should be numbers\n';
-// 	}
-// }
-// modulus(1,1);
-
-
-
-
-
+//Add a function modulus that finds the modulus of 2 numbers.
+function modulus($a, $b) {
+if (is_numeric($a) && is_numeric($b)) {
+		echo $a % $b . PHP_EOL;
+	} else {
+error();	
+}
+}
+modulus(1,1);
