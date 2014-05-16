@@ -4,21 +4,37 @@ $nothing = null;
 $something = '';
 $array = array(1,2,3);
 
-// $serial = array (serialize($array));
-
 
 function check($x)
 {
 	if (isset($x)) {
-		return '$nothin is set' . PHP_EOL;
+		return '$array is set' . PHP_EOL;
 
 }
 else
 {
-	return  '$nothing is empty' . PHP_EOL;
+ //	unset($nothing[$x]);
+	return  '$array is empty' . PHP_EOL;
 }
 }
 echo check($nothing);
+
+// Serialize the array $array, and output the results
+
+
+function serial($x) {
+	return serialize($x);
+}
+
+$serial = serial($array);
+
+echo $serial . PHP_EOL;
+
+// function che
+
+// Unserialize the array $array, and output the results
+
+var_dump(unserialize($serial));
 
 // TEST: If var $nothing is set, display '$nothing is SET'
 
@@ -26,8 +42,3 @@ echo check($nothing);
 
 // TEST: If var $something is set, display '$something is SET'
 
-// Serialize the array $array, and output the results
-
-
-
-// Unserialize the array $array, and output the results
