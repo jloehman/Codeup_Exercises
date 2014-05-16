@@ -17,24 +17,23 @@ else
 	return  '$array is empty' . PHP_EOL;
 }
 }
-echo check($nothing);
+echo check($array);
 
 // Serialize the array $array, and output the results
+// function serial($x) {
+// 	return serialize($x);
+// }
 
-
-function serial($x) {
-	return serialize($x);
-}
-
-$serial = serial($array);
+$serial = serialize($array);
 
 echo $serial . PHP_EOL;
 
-// function che
 
 // Unserialize the array $array, and output the results
 
 var_dump(unserialize($serial));
+
+print_r(unserialize($serial));
 
 // TEST: If var $nothing is set, display '$nothing is SET'
 
