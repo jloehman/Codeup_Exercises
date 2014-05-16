@@ -7,6 +7,7 @@ $array = array(1,2,3);
 
 function check($x)
 {
+	unset($nothing);
 	if (isset($x)) {
 		return '$array is set' . PHP_EOL;
 
@@ -14,10 +15,10 @@ function check($x)
 else
 {
  //	unset($nothing[$x]);
-	return  '$array is empty' . PHP_EOL;
+	return  '$nothing is empty' . PHP_EOL;
 }
 }
-echo check($array);
+echo check($nothing);
 
 // Serialize the array $array, and output the results
 // function serial($x) {
@@ -27,7 +28,6 @@ echo check($array);
 $serial = serialize($array);
 
 echo $serial . PHP_EOL;
-
 
 // Unserialize the array $array, and output the results
 
